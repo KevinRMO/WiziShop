@@ -1,5 +1,24 @@
-<img [src]="wiziShop.imageUrl" [alt]="wiziShop.title" />
-<h2>{{ wiziShop.title }}</h2>
-<h3>{{ wiziShop.price }} euro</h3>
-<p>{{ wiziShop.description }}</p>
-<p>Mise en ligne le {{ wiziShop.createDate }}</p>
+<div class="global">
+  <div class="container">
+    <div class="card">
+      <div class="image">
+        <img [src]="wiziShop.imageUrl" [alt]="wiziShop.title" />
+      </div>
+      <div class="detailCard">
+        <div class="detailTitleDescription">
+          <h2 class="title" (click)="onViewDetail()">{{ wiziShop.title }}</h2>
+          <p>{{ wiziShop.description }}</p>
+        </div>
+        <div class="detailPriceButton">
+          <h3>
+            {{ wiziShop.price | currency : "EUR" : "code" }}
+          </h3>
+
+          <button class="addPanier" (click)="onViewDetail()">
+            Ajouter au panier
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Wizishop } from '../models/wizi-shop.model';
+import { WiziShop } from '../models/wizi-shop.model';
+import { WiziShopService } from '../services/wizi-shops.services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-wizi-shop',
@@ -7,21 +9,16 @@ import { Wizishop } from '../models/wizi-shop.model';
   styleUrl: './wizi-shop.component.css',
 })
 export class WiziShopComponent implements OnInit {
-  @Input() wiziShop!: Wizishop;
-  imageUrl!: string;
-  title!: string;
-  price!: number;
-  description!: string;
-  createDate!: Date;
+  @Input() wiziShop!: WiziShop;
 
-  ngOnInit() {
-    this.imageUrl =
-      'https://img.freepik.com/photos-gratuite/concept-ecran-vide-espace-copie-maquette_53876-124219.jpg?w=996&t=st=1709047727~exp=1709048327~hmac=ec6be555d8e01e597935c6b6178cae28cbe453a5abddfc88b544ff23a55f05ae';
-    this.title = 'Ordinateur Portable';
-    this.price = 900;
-    this.description =
-      'Processeur I5 10700k, Carte graphique Nvidia 3060, 8go de ram';
-    this.createDate = new Date();
+  constructor(
+    private wiziShopService: WiziShopService,
+    private router: Router
+  ) {}
+
+  ngOnInit() {}
+
+  onViewDetail() {
+    this.router.navigateByUrl(`detail/${this.wiziShop.id}`);
   }
-  onAddToCart() {}
 }

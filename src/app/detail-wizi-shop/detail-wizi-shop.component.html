@@ -1,0 +1,16 @@
+<div class="global">
+  <div class="container">
+    <div class="card">
+      <img [src]="wiziShop.imageUrl" [alt]="wiziShop.title" />
+      <div class="detailCard">
+        <h2>{{ wiziShop.title }}</h2>
+        <h3>
+          {{ wiziShop.price | number : "0.0-2" | currency : "EUR" : "code" }}
+        </h3>
+        <p>{{ wiziShop.description }}</p>
+        <p>Mis en ligne le {{ wiziShop.createDate | date : "dd/MM/yy" }}</p>
+        <button (click)="onViewReturn()">Retour</button>
+      </div>
+    </div>
+  </div>
+</div>

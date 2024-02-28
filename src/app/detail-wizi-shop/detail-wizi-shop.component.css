@@ -1,0 +1,42 @@
+.card {
+  box-sizing: border-box;
+  width: 20%;
+  margin: 20px auto;
+  /* padding: 10px 30px; */
+  box-shadow: lightgray 4px 4px 20px;
+}
+.container {
+  background-color: #ffffff;
+}
+
+img {
+  width: 100%;
+}
+
+.detailCard {
+  padding-left: 1vh;
+  padding-bottom: 1vh;
+}
+
+button {
+  background-color: #4caf50; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement intérieur */
+  font-size: 16px; /* Taille de la police */
+  border: none; /* Suppression du bord */
+  border-radius: 4px; /* Arrondi des coins */
+  cursor: pointer; /* Curseur au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition */
+}
+
+button:hover {
+  background-color: #45a049; /* Changement de couleur au survol */
+  color: #f0f0f0; /* Changement de couleur du texte */
+  transform: translateY(-2px); /* Effet de déplacement vers le haut */
+}
+
+button:active {
+  transform: translateY(0); /* Réinitialisation du déplacement lors du clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduction de l'ombre lors du clic */
+}
