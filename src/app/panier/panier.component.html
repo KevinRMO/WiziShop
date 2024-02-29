@@ -1,1 +1,41 @@
-<p>panier works!</p>
+<div class="container">
+  <div class="containerGlobal">
+    <div class="containerPanier">
+      <h1 class="panier:">VOTRE PANIER :</h1>
+      <p class="totalPrice">
+        Prix total: {{ prixTotal | currency : "EUR" : "symbol" : "1.2-2" }}
+      </p>
+    </div>
+    <div class="containerPrice">
+      <p class="item">DESIGNATION</p>
+      <p class="prix">PRIX</p>
+      <img
+        class="delete"
+        src="https://www.shutterstock.com/image-vector/waste-icon-line-art-style-260nw-2174226699.jpg"
+      />
+    </div>
+    <div *ngFor="let item of panierItems; let i = index">
+      <div class="global">
+        <div class="containerCard">
+          <div class="card">
+            <div class="image">
+              <img [src]="item.imageUrl" [alt]="item.title" />
+            </div>
+            <div class="detailCard">
+              <div class="detailTitleDescription">
+                <h2 class="title">{{ item.title }}</h2>
+                <p class="description">{{ item.description }}</p>
+              </div>
+              <div class="detailPriceButton">
+                <h3 class="price">
+                  {{ item.price | currency : "EUR" : "symbol" }}
+                </h3>
+                <button class="buttonX" (click)="retirerDuPanier(i)">X</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

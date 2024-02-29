@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { WiziShop } from '../models/wizi-shop.model';
 import { WiziShopService } from '../services/wizi-shops.services';
 import { Router } from '@angular/router';
+import { PanierService } from '../services/panier.services';
 
 @Component({
   selector: 'app-wizi-shop',
@@ -13,6 +14,7 @@ export class WiziShopComponent implements OnInit {
 
   constructor(
     private wiziShopService: WiziShopService,
+    private panierService: PanierService,
     private router: Router
   ) {}
 
@@ -20,5 +22,9 @@ export class WiziShopComponent implements OnInit {
 
   onViewDetail() {
     this.router.navigateByUrl(`detail/${this.wiziShop.id}`);
+  }
+
+  ajouterAuPanier() {
+    this.panierService.ajouterAuPanier(this.wiziShop);
   }
 }

@@ -14,12 +14,13 @@
 }
 
 .image {
-  flex: 0 0 10%; /* 10% de la largeur pour l'image */
+  width: 150px;
+  height: 150px;
 }
 
 .image img {
-  width: 100%; /* La largeur de l'image est de 100% de la div parent */
-  height: 100%; /* La hauteur de l'image est de 100% de la div parent */
+  width: 150px; /* La largeur de l'image est de 100% de la div parent */
+  height: 150px; /* La hauteur de l'image est de 100% de la div parent */
   object-fit: cover; /* L'image remplit entièrement son conteneur en conservant ses proportions */
 }
 
@@ -36,6 +37,14 @@
   margin-right: 20px; /* Ajoute un espacement à droite */
 }
 
+.description {
+  color: rgb(98, 98, 98);
+}
+
+.price {
+  color: #2757b6;
+}
+
 .detailPriceButton {
   display: flex;
 }
@@ -46,13 +55,13 @@
 }
 
 .addPanier {
-  margin-left: 1vh; /* Ajoute un espace de 1% de la hauteur de la fenêtre à gauche du bouton */
+  margin-left: 2vh;
 }
 
 button {
   background-color: #4caf50; /* Couleur de fond */
   color: white; /* Couleur du texte */
-  padding: 10px 20px; /* Taille fixe du padding */
+  padding: 10px 10px; /* Taille fixe du padding */
   font-size: 16px; /* Taille de la police */
   border: none; /* Suppression du bord */
   border-radius: 4px; /* Arrondi des coins */

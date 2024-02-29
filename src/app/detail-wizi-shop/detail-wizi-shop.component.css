@@ -1,8 +1,14 @@
+.global {
+  padding: 1px 20vh; /* Ajoute un espace de 20 pixels à gauche et à droite de l'écran */
+}
+
 .card {
+  display: flex;
+  flex-direction: row; /* Définit la direction des éléments enfants */
+  align-items: center; /* Centre les éléments sur l'axe vertical */
+  justify-content: space-between; /* Répartit l'espace disponible entre les éléments */
   box-sizing: border-box;
-  width: 20%;
-  margin: 20px auto;
-  /* padding: 10px 30px; */
+  width: 100%;
   box-shadow: lightgray 4px 4px 20px;
 }
 .container {
@@ -10,10 +16,17 @@
 }
 
 img {
-  width: 100%;
+  max-width: 40%; /* Limite la largeur de l'image à 30% de la largeur de son conteneur */
 }
 
+.image img {
+  width: 100%; /* La largeur de l'image est de 100% de la div parent */
+  height: auto; /* La hauteur de l'image s'ajuste automatiquement pour conserver les proportions */
+  object-fit: cover; /* L'image remplit entièrement son conteneur en conservant ses proportions */
+  min-width: 0; /* Empêche l'image de réduire sa taille au-delà de sa taille minimale */
+}
 .detailCard {
+  flex: 1; /* Utilise tout l'espace disponible restant */
   padding-left: 1vh;
   padding-bottom: 1vh;
 }
