@@ -2,13 +2,18 @@
   <div class="container">
     <div class="navbar-start">
       <a class="navbar-item-title" routerLink="">Wizi Shop</a>
-      <a class="navbar-item" routerLink="" routerLinkActive="active">Accueil</a>
+      <a
+        class="navbar-item"
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Accueil</a
+      >
     </div>
     <div class="navbar-end">
       <a class="navbar-item" routerLink="/panier" routerLinkActive="active"
         >Panier</a
       >
-      <!-- Lien pour afficher le panier -->
     </div>
   </div>
 </nav>

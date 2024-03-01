@@ -14,6 +14,8 @@ export class WiziShopService {
       price: 900,
       description:
         'Intel Core i7-13700H 32 Go SSD 1 To 14" LED Full HD+ Wi-Fi 6E/Bluetooth Webcam Windows 11 Professionnel',
+      technique:
+        'Intel Core i7-13700H 32 Go SSD 1 To 14" LED Full HD+ Wi-Fi 6E/Bluetooth Webcam Windows 11 Professionnel, CARACTÉRISTIQUES PRINCIPALES :<br> Processeur Intel Core i5-1235U (2 Performance-Cores 4.4 GHz Turbo + 8 Efficient-Cores 3.3 GHz Turbo - 12 Threads - Cache 12 Mo),<br> 8 Go de mémoire vive DDR4,<br> Écran de 14" avec résolution Full HD (1920 x 1080),<br> SSD M.2 PCIe de 256 Go,<br> Communication sans fil performante : Wi-Fi 6 et Bluetooth 5.1,<br> Sécurité : puce TPM 2.0 et lecteur d\'empreinte digitale,<br> Webcam HD avec obturateur,<br> Windows 11 Professionnel',
       createDate: new Date(),
     },
     {

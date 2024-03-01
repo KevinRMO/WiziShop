@@ -1,17 +1,30 @@
 <div class="global">
   <div class="container">
-    <div class="card">
-      <div class="image">
-        <img [src]="wiziShop.imageUrl" [alt]="wiziShop.title" />
+    <div class="row">
+      <div class="col-md-9">
+        <div class="card">
+          <div class="image">
+            <img [src]="wiziShop.imageUrl" [alt]="wiziShop.title" />
+          </div>
+          <div class="detailCard">
+            <h2 class="title">{{ wiziShop.title }}</h2>
+            <h3 class="price">
+              {{
+                wiziShop.price | number : "0.0-2" | currency : "EUR" : "code"
+              }}
+            </h3>
+            <p>{{ wiziShop.description }}</p>
+            <p>Mis en ligne le {{ wiziShop.createDate | date : "dd/MM/yy" }}</p>
+            <button (click)="onViewReturn()">Retour</button>
+          </div>
+        </div>
+        <div class="containerTechnique">
+          <h2>CARACTÉRISTIQUES PRINCIPALES :</h2>
+          <p class="technique">{{ wiziShop.technique }}</p>
+        </div>
       </div>
-      <div class="detailCard">
-        <h2>{{ wiziShop.title }}</h2>
-        <h3>
-          {{ wiziShop.price | number : "0.0-2" | currency : "EUR" : "code" }}
-        </h3>
-        <p>{{ wiziShop.description }}</p>
-        <p>Mis en ligne le {{ wiziShop.createDate | date : "dd/MM/yy" }}</p>
-        <button (click)="onViewReturn()">Retour</button>
+      <div class="containerAjoutPanier">
+        <button (click)="ajouterAuPanier()">Ajouter au panier</button>
       </div>
     </div>
   </div>

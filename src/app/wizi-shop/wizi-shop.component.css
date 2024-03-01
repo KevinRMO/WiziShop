@@ -11,6 +11,7 @@
   box-sizing: border-box;
   width: 100%; /* Largeur de la carte sur toute la ligne */
   box-shadow: lightgray 4px 4px 20px;
+  gap: 2vh;
 }
 
 .image {
@@ -37,8 +38,13 @@
   margin-right: 20px; /* Ajoute un espacement à droite */
 }
 
+.title {
+  color: rgb(50, 50, 50);
+}
+
 .description {
   color: rgb(98, 98, 98);
+  font-size: 1rem;
 }
 
 .price {
@@ -79,4 +85,83 @@ button:hover {
 button:active {
   transform: translateY(0); /* Réinitialisation du déplacement lors du clic */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduction de l'ombre lors du clic */
+}
+
+/* Pour les petits écrans comme les téléphones */
+@media (max-width: 767px) {
+  .global {
+    padding: 0px;
+  }
+
+  .detailCard {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 10px;
+    flex-direction: row;
+    padding: 0;
+    padding-right: 5px;
+  }
+
+  .card {
+    box-shadow: none;
+    border-top: 1px solid lightgray;
+  }
+
+  .addPanier {
+    font-size: 12px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+  }
+
+  .detailPriceButton {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .image img {
+    width: 100px; /* La largeur de l'image est de 100% de la div parent */
+    height: 100px; /* La hauteur de l'image est de 100% de la div parent */
+    object-fit: cover; /* L'image remplit entièrement son conteneur en conservant ses proportions */
+  }
+
+  .title {
+    font-size: 1em;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .price {
+    font-size: 0.9em;
+  }
+}
+
+/* Pour les tablettes et écrans moyens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles spécifiques pour les tablettes */
+  .global {
+    padding: 1px;
+  }
+
+  .title {
+    font-size: 1.3em;
+  }
+
+  .description {
+    color: rgb(98, 98, 98);
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 14px;
+  }
 }

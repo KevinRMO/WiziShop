@@ -1,7 +1,7 @@
 <div class="container">
   <div class="containerGlobal">
     <div class="containerPanier">
-      <h1 class="panier:">VOTRE PANIER :</h1>
+      <h1 class="panier">VOTRE PANIER :</h1>
       <p class="totalPrice">
         Prix total: {{ prixTotal | currency : "EUR" : "symbol" : "1.2-2" }}
       </p>
@@ -24,9 +24,20 @@
             <div class="detailCard">
               <div class="detailTitleDescription">
                 <h2 class="title">{{ item.title }}</h2>
-                <p class="description">{{ item.description }}</p>
+                <p class="description">
+                  {{ item.description | slice : 0 : 100 }}...
+                </p>
               </div>
               <div class="detailPriceButton">
+                <select
+                  class="buttonSelect"
+                  [(ngModel)]="item.quantity"
+                  (change)="updateTotalPrice()"
+                >
+                  <option *ngFor="let q of [1, 2, 3, 4, 5]" [value]="q">
+                    {{ q }}
+                  </option>
+                </select>
                 <h3 class="price">
                   {{ item.price | currency : "EUR" : "symbol" }}
                 </h3>

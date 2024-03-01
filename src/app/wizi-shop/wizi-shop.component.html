@@ -7,7 +7,9 @@
       <div class="detailCard">
         <div class="detailTitleDescription">
           <h2 class="title" (click)="onViewDetail()">{{ wiziShop.title }}</h2>
-          <p class="description">{{ wiziShop.description }}</p>
+          <p class="description">
+            {{ wiziShop.description | slice : 0 : 100 }}
+          </p>
         </div>
         <div class="detailPriceButton">
           <h3 class="price">

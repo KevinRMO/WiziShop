@@ -9,7 +9,8 @@
 }
 
 .navbar-item-title {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
+  font-weight: 500;
   color: #111;
   &:hover {
     text-decoration: none;

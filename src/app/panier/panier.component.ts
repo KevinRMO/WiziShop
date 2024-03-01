@@ -27,4 +27,14 @@ export class PanierComponent implements OnInit {
   calculerPrixTotal() {
     this.prixTotal = this.panierService.calculerPrixTotal();
   }
+
+  updateTotalPrice() {
+    // Recalculer le prix total en tenant compte de la quantité sélectionnée pour chaque élément du panier
+    this.prixTotal = 0; // Réinitialiser le prix total
+    this.panierItems.forEach((item) => {
+      if (item.quantity !== undefined && item.quantity !== null) {
+        this.prixTotal += item.price * item.quantity; // Multiplier le prix par la quantité pour chaque élément
+      }
+    });
+  }
 }

@@ -5,4 +5,6 @@ export class WiziShop {
   price!: number;
   description!: string;
   createDate!: Date;
+  technique?: string;
+  quantity?: number;
 }

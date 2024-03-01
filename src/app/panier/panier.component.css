@@ -62,6 +62,14 @@
   margin-right: 20px; /* Ajoute un espacement à droite */
 }
 
+.panier {
+  color: rgb(57, 57, 57);
+}
+
+.title {
+  color: rgb(50, 50, 50);
+}
+
 .description {
   color: rgb(98, 98, 98);
 }
@@ -99,6 +107,13 @@
 
 .addPanier {
   margin-left: 1vh; /* Ajoute un espace de 1% de la hauteur de la fenêtre à gauche du bouton */
+}
+
+.buttonSelect {
+  margin-top: 8px;
+  width: 70px;
+  height: 50px;
+  padding-left: 20px;
 }
 
 button {

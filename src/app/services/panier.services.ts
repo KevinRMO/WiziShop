@@ -1,4 +1,3 @@
-// panier.service.ts
 import { Injectable } from '@angular/core';
 import { WiziShop } from '../models/wizi-shop.model';
 

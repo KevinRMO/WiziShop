@@ -25,6 +25,18 @@ export class WiziShopComponent implements OnInit {
   }
 
   ajouterAuPanier() {
-    this.panierService.ajouterAuPanier(this.wiziShop);
+    // Vérifier si l'article est déjà présent dans le panier
+    const articleExistant = this.panierService.panierItems.find(
+      (item) => item.id === this.wiziShop.id
+    );
+
+    if (articleExistant) {
+      // Si l'article est déjà présent, augmenter sa quantité si la propriété quantity existe
+      articleExistant.quantity = (articleExistant.quantity ?? 0) + 1;
+    } else {
+      // Sinon, ajouter l'article avec une quantité de 1
+      this.wiziShop.quantity = 1;
+      this.panierService.ajouterAuPanier(this.wiziShop);
+    }
   }
 }
