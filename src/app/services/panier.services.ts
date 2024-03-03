@@ -18,7 +18,14 @@ export class PanierService {
   calculerPrixTotal(): number {
     let total = 0;
     this.panierItems.forEach((item) => {
-      total += item.price;
+      // Vérifie si la propriété quantity est définie
+      if (item.quantity !== undefined) {
+        // Utilise la quantité si elle est définie
+        total += item.price * item.quantity;
+      } else {
+        // Sinon, utilise une quantité par défaut (par exemple, 1)
+        total += item.price;
+      }
     });
     return total;
   }

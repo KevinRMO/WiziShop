@@ -1,6 +1,7 @@
 .global {
-  padding: 1px 20vh;
   background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -14,6 +15,8 @@
 }
 .container {
   background-color: #ffffff;
+  display: table;
+  width: 90%;
 }
 
 .containerTechnique {
@@ -30,12 +33,12 @@
 }
 
 img {
-  max-width: 400px;
+  max-width: 200px;
 }
 
 .image img {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 .detailCard {
@@ -51,6 +54,11 @@ img {
 
 .price {
   color: #2757b6;
+}
+
+.technique {
+  color: rgb(50, 50, 50);
+  text-decoration: underline;
 }
 
 button {

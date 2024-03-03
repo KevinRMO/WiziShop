@@ -31,6 +31,10 @@
   margin: 3vh;
 }
 
+.panier {
+  cursor: pointer;
+}
+
 .navbar-start {
   display: flex;
   align-items: center;
@@ -49,4 +53,8 @@ a {
 .active {
   color: #666;
   text-decoration: underline;
+}
+
+svg {
+  cursor: pointer;
 }

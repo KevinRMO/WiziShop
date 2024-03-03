@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { WiziShop } from '../models/wizi-shop.model';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-bar.component.css'], // Utilisez styleUrls au lieu de styleUrl
 })
 export class NavBarComponent {
+  panierItems: WiziShop[] = [];
+
   constructor(private router: Router) {}
 
   goToHome() {
