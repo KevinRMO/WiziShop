@@ -72,7 +72,7 @@ export class WiziShopService {
       imageUrl:
         'https://img.freepik.com/photos-gratuite/gamer-femme-appuyant-bouton-demarrage-ordinateur-rvb-pendant-jeux-video-tir-spatial-pendant-competition-ligne-debout-dans-studio-jeu-systeme-exploitation-pc-professionnel-pour-joueurs-esports_482257-33483.jpg?t=st=1709134851~exp=1709138451~hmac=02325e7d9bcb46b6c6670c3a20944e83814f3fd65e3b4f70bd30d87f4990b76c&w=740',
       title: 'PC11 Bazooka Gen 12',
-      price: 1000,
+      price: 999,
       description:
         'PC gamer Intel Core i5-12400F 16 Go SSD 500 Go NVIDIA GeForce RTX 4060 8 Go LAN 2.5 GbE Windows 11 Famille (monté)',
       spec: `Processeur AMD Ryzen 7 5800X (3.8 GHz / 4.7 GHz)`,
@@ -87,7 +87,7 @@ export class WiziShopService {
       imageUrl:
         'https://img.freepik.com/photos-gratuite/gros-plan-mains-ingenieur-tapant-clavier-dans-bureau-domicile_482257-23398.jpg?t=st=1709134992~exp=1709138592~hmac=13ab7cee8813477a8ef5e8c28d81e12ee3cd3788b95d0d9b2fdca16f59f5b94f&w=1380',
       title: 'BlackWidow V4 (switches Razer Green)',
-      price: 189.95,
+      price: 189,
       description:
         'Clavier gaming - interrupteurs mécaniques verts à clics tactiles (switches Razer Green) - molette multimédia - rétroéclairage RGB Razer Chroma - AZERTY, Français',
       spec: `Clavier gamer filaire`,

@@ -13,8 +13,10 @@
                 wiziShop.price | number : "0.0-2" | currency : "EUR" : "code"
               }}
             </h3>
-            <p>{{ wiziShop.description }}</p>
-            <p>Mis en ligne le {{ wiziShop.createDate | date : "dd/MM/yy" }}</p>
+            <p class="description">{{ wiziShop.description }}</p>
+            <p class="date">
+              Mis en ligne le {{ wiziShop.createDate | date : "dd/MM/yy" }}
+            </p>
             <button (click)="onViewReturn()">Retour</button>
           </div>
         </div>

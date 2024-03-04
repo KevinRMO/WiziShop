@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PanierComponent } from './panier/panier.component'; // Importez le composant PanierComponent
+import { PanierComponent } from './panier/panier.component';
 import { WiziShopListComponent } from './wizi-shop-list/wizi-shop-list.component';
 import { DetailWiziShopComponent } from './detail-wizi-shop/detail-wizi-shop.component';
 

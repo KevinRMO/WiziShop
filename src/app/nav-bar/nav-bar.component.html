@@ -3,14 +3,32 @@
     <div class="navbar-start">
       <a class="navbar-item-title" routerLink="">Wizi Shop</a>
       <a
-        class="navbar-item"
+        class="navbar-item hide-on-mobile"
         routerLink=""
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
         >Accueil</a
       >
     </div>
+
     <div class="navbar-end">
+      <!-- Icône du menu burger -->
+      <div class="navbar-burger" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Menu de navigation -->
+      <div class="navbar-menu" [class.is-active]="isMenuOpen">
+        <a class="navbar-item" routerLink="" (click)="closeMenu()">Accueil</a>
+        <!-- Lien vers l'accueil -->
+        <a class="navbar-item" routerLink="/panier" (click)="closeMenu()"
+          >Panier</a
+        >
+        <!-- Lien vers le panier -->
+      </div>
+      <!-- Icône du panier -->
       <svg
         routerLink="/panier"
         class="panier"

@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PanierService } from '../services/panier.services';
 import { WiziShop } from '../models/wizi-shop.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-panier',
@@ -12,11 +13,15 @@ export class PanierComponent implements OnInit {
   panierItems: WiziShop[] = [];
   prixTotal: number = 0;
 
-  constructor(private panierService: PanierService) {}
+  constructor(private panierService: PanierService, private router: Router) {}
 
   ngOnInit() {
     this.panierItems = this.panierService.panierItems;
     this.calculerPrixTotal();
+  }
+
+  onViewDetailPanier(id: number) {
+    this.router.navigateByUrl(`detail/${id.toString()}`);
   }
 
   retirerDuPanier(index: number) {

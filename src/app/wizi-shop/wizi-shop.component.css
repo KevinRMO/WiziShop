@@ -1,5 +1,5 @@
 .global {
-  padding: 1px 20vh; /* Ajoute un espace de 20 pixels à gauche et à droite de l'écran */
+  padding: 1px 20vh;
 }
 
 .container {
@@ -7,9 +7,9 @@
 }
 
 .card {
-  display: flex; /* Utiliser Flexbox pour aligner les éléments */
+  display: flex;
   box-sizing: border-box;
-  width: 100%; /* Largeur de la carte sur toute la ligne */
+  width: 100%;
   box-shadow: lightgray 4px 4px 20px;
   gap: 2vh;
 }
@@ -20,22 +20,22 @@
 }
 
 .image img {
-  width: 150px; /* La largeur de l'image est de 100% de la div parent */
-  height: 150px; /* La hauteur de l'image est de 100% de la div parent */
-  object-fit: cover; /* L'image remplit entièrement son conteneur en conservant ses proportions */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
 
 .detailCard {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1; /* Le reste de la largeur pour les détails */
-  padding: 10px; /* Espacement intérieur */
+  flex: 1;
+  padding: 10px;
 }
 
 .detailTitleDescription {
-  flex: 0 0 60%; /* 60% de la largeur pour detailTitleDescription */
-  margin-right: 20px; /* Ajoute un espacement à droite */
+  flex: 0 0 60%;
+  margin-right: 20px;
 }
 
 .title {
@@ -65,26 +65,26 @@
 }
 
 button {
-  background-color: #4caf50; /* Couleur de fond */
-  color: white; /* Couleur du texte */
-  padding: 10px 10px; /* Taille fixe du padding */
-  font-size: 16px; /* Taille de la police */
-  border: none; /* Suppression du bord */
-  border-radius: 4px; /* Arrondi des coins */
-  cursor: pointer; /* Curseur au survol */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
-  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition */
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 button:hover {
-  background-color: #45a049; /* Changement de couleur au survol */
-  color: #f0f0f0; /* Changement de couleur du texte */
-  transform: translateY(-2px); /* Effet de déplacement vers le haut */
+  background-color: #45a049;
+  color: #f0f0f0;
+  transform: translateY(-2px);
 }
 
 button:active {
-  transform: translateY(0); /* Réinitialisation du déplacement lors du clic */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduction de l'ombre lors du clic */
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Pour les petits écrans comme les téléphones */
@@ -127,9 +127,9 @@ button:active {
   }
 
   .image img {
-    width: 100px; /* La largeur de l'image est de 100% de la div parent */
-    height: 100px; /* La hauteur de l'image est de 100% de la div parent */
-    object-fit: cover; /* L'image remplit entièrement son conteneur en conservant ses proportions */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
   }
 
   .title {
@@ -163,5 +163,32 @@ button:active {
 
   button {
     font-size: 14px;
+  }
+}
+
+/* Pour les petits écrans comme les fold */
+@media (max-width: 653px) {
+  .title,
+  .price {
+    font-size: 0.8em;
+  }
+
+  .image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .addPanier {
+    font-size: 9px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
   }
 }

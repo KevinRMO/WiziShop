@@ -6,21 +6,19 @@
 
 .card {
   display: flex;
-  flex-direction: row; /* Définit la direction des éléments enfants */
+  flex-direction: row;
   box-sizing: border-box;
   width: 100%;
-  /* box-shadow: lightgray 0px 0px 10px; */
   align-items: center;
   border-bottom: 8px solid #f1f1f1;
 }
 .container {
   background-color: #ffffff;
   display: table;
-  width: 90%;
+  width: 80%;
 }
 
 .containerTechnique {
-  /* box-shadow: lightgray 0px 0px 10px; */
   padding: 1vh;
 }
 
@@ -33,16 +31,17 @@
 }
 
 img {
-  max-width: 200px;
+  max-width: 250px;
 }
 
 .image img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
+
 .detailCard {
-  padding-left: 3vh;
+  padding: 3vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -56,30 +55,123 @@ img {
   color: #2757b6;
 }
 
+.date {
+  font-size: 0.7em;
+}
+
 .technique {
   color: rgb(50, 50, 50);
   text-decoration: underline;
 }
 
 button {
-  background-color: #4caf50; /* Couleur de fond */
-  color: white; /* Couleur du texte */
-  padding: 10px 20px; /* Espacement intérieur */
-  font-size: 16px; /* Taille de la police */
-  border: none; /* Suppression du bord */
-  border-radius: 4px; /* Arrondi des coins */
-  cursor: pointer; /* Curseur au survol */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
-  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition */
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 button:hover {
-  background-color: #45a049; /* Changement de couleur au survol */
-  color: #f0f0f0; /* Changement de couleur du texte */
-  transform: translateY(-2px); /* Effet de déplacement vers le haut */
+  background-color: #45a049;
+  color: #f0f0f0;
+  transform: translateY(-2px);
 }
 
 button:active {
-  transform: translateY(0); /* Réinitialisation du déplacement lors du clic */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduction de l'ombre lors du clic */
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Pour les petits écrans comme les téléphones */
+@media (max-width: 767px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detailCard {
+    padding: 1vh;
+    display: table;
+  }
+
+  img {
+    max-width: 365px;
+  }
+
+  .image img {
+    width: 365px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .title,
+  .price,
+  .technique {
+    font-size: 1em;
+  }
+
+  .description,
+  .spec,
+  .specTwo,
+  .specThree,
+  .specFour,
+  .specFive {
+    font-size: 0.8em;
+  }
+
+  .date {
+    font-size: 0.7em;
+  }
+
+  button {
+    width: 12vh;
+    font-size: 0.8em;
+    padding: 3px 7px;
+  }
+}
+
+/* Pour les tablettes et écrans moyens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .date {
+    font-size: 0.7em;
+  }
+}
+
+/* Pour les petits écrans comme les fold */
+@media (max-width: 653px) {
+  .title,
+  .price,
+  .technique {
+    font-size: 0.8em;
+  }
+
+  .description,
+  .spec,
+  .specTwo,
+  .specThree,
+  .specFour,
+  .specFive {
+    font-size: 0.7em;
+  }
+
+  img {
+    max-width: 250px;
+  }
+
+  .image img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  button {
+    width: 12vh;
+    font-size: 0.7em;
+    padding: 3px 7px;
+  }
 }

@@ -7,13 +7,6 @@
       <div class="containerPriceTwo">
         <p class="quantiter">QUANTITER</p>
         <p class="prix">PRIX</p>
-        <!-- <img
-          class="corbeille"
-          src="assets/assets/bin.svg"
-          alt="Cart Icon"
-          routerLink="/panier"
-          routerLinkActive="active"
-        /> -->
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +35,9 @@
             </div>
             <div class="detailCard">
               <div class="detailTitleDescription">
-                <h2 class="title">{{ item.title }}</h2>
+                <h2 (click)="onViewDetailPanier(item.id)" class="title">
+                  {{ item.title }}
+                </h2>
                 <p class="description">
                   {{ item.description | slice : 0 : 100 }}...
                 </p>

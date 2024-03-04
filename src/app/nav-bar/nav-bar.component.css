@@ -20,7 +20,6 @@
 
 .navbar-item {
   color: #111;
-  /* margin-left: 10px; */
 }
 
 .container {
@@ -58,3 +57,62 @@ a {
 svg {
   cursor: pointer;
 }
+
+.navbar-menu {
+  display: none;
+}
+
+/* Pour les petits écrans */
+@media (max-width: 820px) {
+  /* Styles pour le menu burger sur les téléphones */
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .panier {
+    display: none;
+  }
+  .navbar-burger {
+    cursor: pointer;
+    padding: 30px;
+    display: initial;
+  }
+
+  .navbar-burger span {
+    background-color: #333;
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-burger span:nth-child(2) {
+    width: 80%;
+  }
+
+  .navbar-burger span:last-child {
+    width: 60%;
+  }
+
+  /* Afficher le menu burger verticalement */
+
+  .navbar-menu.is-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid lightgrey;
+    position: absolute;
+    left: 0; /* Aligner le menu à gauche */
+    top: 8vh;
+    width: 100%;
+  }
+}
+
+/* Pour les tablettes et écrans moyens */
+@media (min-width: 821px) and (max-width: 1024px) {
+}
+/* Styles spécifiques pour les tablettes */
